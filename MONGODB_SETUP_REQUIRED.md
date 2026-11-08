@@ -6,7 +6,11 @@ The uploaded project is configured for MongoDB Atlas, but it does not contain da
 2. Create a database user and allow your current IP address in Network Access.
 3. In Atlas, choose Connect -> Drivers -> Node.js and copy the connection string.
 4. Open `server/.env` and replace the entire `MONGODB_URI` value with your real Atlas URI. Replace the username, password, cluster and database placeholders. URL-encode special characters in the database password.
+<<<<<<< HEAD
 5. Registration does not require an invitation code. New accounts are automatically assigned the Creator role in `REGISTRATION_ORGANIZATION`.
+=======
+5. Keep `REGISTRATION_INVITE_CODE=BrandGuard2026` for local testing, or change it and enter the matching value in the registration form.
+>>>>>>> origin/main
 6. Change `JWT_SECRET` to a newly generated random value of at least 32 characters.
 7. In a terminal opened in `server`, run `npm install` then `npm run dev`.
 8. In another terminal opened in the project root, run `npm install` then `npm run dev`.

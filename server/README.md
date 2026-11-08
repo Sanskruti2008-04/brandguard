@@ -49,6 +49,10 @@ The frontend's synchronous legacy stores are retained to avoid rewriting the tea
 
 ## Registration security
 
+<<<<<<< HEAD
 Public self-registration is enabled without an invitation code. Set `REGISTRATION_ORGANIZATION` to the workspace slug (lowercase, e.g. `brandguard`). New registrations always receive the Creator role; Admin/Reviewer/Legal accounts must be provisioned by an Admin or the seed process. Because registration is open, anyone who can reach the API can create a Creator account; restrict access at the deployment/network level for private workspaces.
+=======
+Public self-registration is invitation-only. Set `REGISTRATION_INVITE_CODE` in `server/.env` to a long random value and share it only with approved teammates. Set `REGISTRATION_ORGANIZATION` to the workspace slug (lowercase, e.g. `brandguard`). Without an invitation code, registration is disabled. New registrations always receive the Creator role; Admin/Reviewer/Legal accounts must be provisioned by an Admin or the seed process.
+>>>>>>> origin/main
 
 The API normalizes legacy user organization names to lowercase at startup.
