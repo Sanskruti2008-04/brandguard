@@ -11,7 +11,7 @@ The existing application was patched in place. No rebuild, framework migration, 
 5. **Decision reversal.** Workspace and Mongo decision routes enforce one-way transitions. Reviewer and Legal roles have separate permitted transitions; Admin cannot issue review/legal decisions.
 6. **Scanner rule IDs.** Scanner rule mapping now supports both Mongo `_id` and workspace `id`.
 7. **Lost updates from stale tabs.** Workspace snapshots use optimistic version checks. A stale write receives HTTP 409 rather than overwriting newer shared state.
-8. **Open registration.** Self-registration now requires an invitation code and always creates a Creator account in the configured organization. Admin/Reviewer/Legal roles remain provisioned by an Admin or seed process.
+8. **Open registration.** Self-registration no longer asks for or validates an invitation code. New accounts always receive the Creator role in the configured organization. Admin/Reviewer/Legal roles remain provisioned by an Admin or seed process.
 9. **Organization casing.** Organization values are normalized to lowercase in schemas, registration, seed creation and route queries. Existing user organization values are normalized at API startup.
 
 ## Verification performed
